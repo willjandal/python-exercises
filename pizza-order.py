@@ -6,7 +6,7 @@ size = input() #What size pizza do you want? S, M, or L
 add_pepperoni = input() # Do you want to pepperoni? Y or N
 extra_cheese = input() #Do you want extra cheese? Y or N
 
-#added a single line of code to test connection with github
-#added this line of code from my mac
-#adding this to test connection from windows to mac
-#communication seems to be working
+
+# 🚨 Don't change the code above 👆
+
+# Write your code below this line 👇
