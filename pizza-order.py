@@ -1,11 +1,11 @@
 print("Thank you for choosing Python Pizza Deliveries!")
 
 #price list
-#Small Pizza (S) = 15
-#Medium Pizza (M) = 20
-#Large Pizza (L) = 25
-#Additional pepperoni = 2
-#Additional cheese = 1
+# small = 15
+# medium = 20
+# large = 25
+# pepperoni = 2
+# cheese = 1
 
 size = input("What size of pizza do you want? S, M, or L: ") #What size pizza do you want? S, M, or L
 add_pepperoni = input("Do you want to add pepperoni? [Y or N]: ") # Do you want to pepperoni? Y or N
@@ -20,9 +20,13 @@ print(f"Additional Pepperoni: {add_pepperoni}")
 print(f"Additional Cheese: {extra_cheese}")
 
 
+# need to make this a function
 if size == "S" or size == "s":
     if add_pepperoni == "Y" or add_pepperoni == "y":
-#        if extra_cheese == "Y" or extra_cheese == "y":
+        if extra_cheese == "Y" or extra_cheese == "y":
+            print(f"You've ordered a Small pizza!")
+            print("Total bill: $18!")
+        else:
             print(f"You've ordered a Small pizza!")
             print("Total bill: $17!")
     else:
@@ -34,4 +38,5 @@ if size == "S" or size == "s":
 #elif size == "L" or size == "l":
 #    print(f"You've ordered a Large pizza!")
 #    print(f"Total bill: $25!")
-    
+else:
+    print("Hello World!")    
