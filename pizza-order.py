@@ -21,6 +21,7 @@ print(f"Additional Cheese: {extra_cheese}")
 
 
 if size == "S" or "s":
-    print(15)
+    print(f"You've ordered a Small pizza!")
+    print("Total bill: $15!")
 else:
     print("Hello World")
