@@ -24,19 +24,27 @@ print(f"Additional Cheese: {extra_cheese}")
 if size == "S" or size == "s":
     if add_pepperoni == "Y" or add_pepperoni == "y":
         if extra_cheese == "Y" or extra_cheese == "y":
-            print(f"You've ordered a Small pizza!")
+            print(f"You've ordered a Small sized pizza with Pepperoni and Extra Cheese!")
             print("Total bill: $18!")
         else:
-            print(f"You've ordered a Small pizza!")
+            print(f"You've ordered a Small sized pizza with Pepperoni!")
             print("Total bill: $17!")
     else:
-        print(f"You've ordered a Small pizza!")
+        print(f"You've ordered a Small sized pizza!")
         print("Total bill: $15!")
-#elif size == "M" or size == "m":
-#    print(f"You've ordered a Medium pizza!")
-#    print(f"Total bill: $20!")
+elif size == "M" or size == "m":
+    if add_pepperoni == "Y" or add_pepperoni == "y":
+        if extra_cheese == "Y" or extra_cheese == "y":
+            print(f"You've ordered a Medium sized pizza with Pepperoni and Extra Cheese!")
+            print("Total bill: $23!")
+        else:
+            print(f"You've ordered a Medium sized pizza with Pepperoni!")
+            print("Total bill: $22!")
+    else:
+        print(f"You've ordered a Medium sized pizza!")
+        print(f"Total bill: $20!")
 #elif size == "L" or size == "l":
 #    print(f"You've ordered a Large pizza!")
 #    print(f"Total bill: $25!")
 else:
-    print("Hello World!")    
+    print("There seems to be a problem, please check your entries!")    
