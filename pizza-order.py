@@ -20,7 +20,6 @@ extra_cheese = input("Do you want to add extra cheese? [Y or N]: ") #Do you want
 # Functions 👇
 
 # Display order summary
-
 def orderSummary():
     print("[+] Order Summary")
     if size == "S" or size == "s":
@@ -31,67 +30,92 @@ def orderSummary():
         print(f"[+] Pizza Size: Large")
     else:
         print(f"[+] It seems you've entered an invalid input. Please enter S, M, or L")
-    print(f"[+] Additional Pepperoni: {add_pepperoni}")
-    print(f"[+] Additional Cheese: {extra_cheese}")
+
+    #this checks if customer added a pepperoni    
+    if add_pepperoni == "y" or add_pepperoni == "Y":
+        print("[+] Additional Pepperoni: Yes")
+    elif add_pepperoni == "N" or add_pepperoni == "n":
+        print("[+] Additional Pepperoni: No")
+    else:
+        print("[+] There seems to be a problem, please check your entries!")
+    
+    #this checks if a customer added extra cheese
+    if extra_cheese == "Y" or extra_cheese == "y":
+        print("[+] Additional Cheese: Yes")
+    elif extra_cheese == "N" or extra_cheese == "n":
+        print("[+] Additional Cheese: No")
+    else:
+        print("[+] There seems to be a problem, please check your entry!")
     
 
 # Process the logic from the inputs
 def processOrder():
-    if size == "S" or size == "s":
-        if add_pepperoni == "Y" or add_pepperoni == "y":
-            if extra_cheese == "Y" or extra_cheese == "y":
-                print(f"You've ordered a Small sized pizza with Pepperoni and Extra Cheese!")
-                print(f"Total bill: $18")
-            else: 
-                print(f"You've ordered a Small sized pizza with Pepperoni!")
-                print(f"Total bill: $17!")
+        #process the order for small pizza
+        if size == "s" or size == "S":
+            price = 15
+            if add_pepperoni == "Y" or add_pepperoni == "y":
+                price = price + 2
+                if extra_cheese == "Y" or extra_cheese == "y":
+                    price = price + 1
+                    print("Expected Result: Price = 18")
+                    print(price)
+                else:
+                    print("Expected Result: Price = 17")
+                    print(price)
+            elif add_pepperoni == "N" or add_pepperoni == "n":
+                if extra_cheese == "Y" or extra_cheese == "y":
+                    price = price + 1
+                    print("Expected Result: Price = 16")
+                    print(price)
+                else:
+                    print("Expected result: Price = 15")
+                    print(price)
+        elif size == "m" or size == "M":
+            price = 20
+            if add_pepperoni == "Y" or add_pepperoni == "y":
+                price = price + 3
+                if extra_cheese == "Y" or extra_cheese == "y":
+                    price = price + 1
+                    print("Expected Result: Price = 23")
+                    print(price)
+                else:
+                    print("Expected Result: Price = 22")
+                    print(price)
+            elif add_pepperoni == "N" or add_pepperoni == "n":
+                if extra_cheese == "Y" or extra_cheese == "y":
+                    price = price + 1
+                    print("Expected Result: Price = 21")
+                    print(price)
+                else:
+                    print("Expected result: Price = 20")
+                    print(price)
+
+        elif size == "l" or size == "L":
+            price = 25
+            if add_pepperoni == "Y" or add_pepperoni == "y":
+                price = price + 3
+                if extra_cheese == "Y" or extra_cheese == "y":
+                    price = price + 1
+                    print("Expected Result: Price = 23")
+                    print(price)
+                else:
+                    print("Expected Result: Price = 22")
+                    print(price)
+            elif add_pepperoni == "N" or add_pepperoni == "n":
+                if extra_cheese == "Y" or extra_cheese == "y":
+                    price = price + 1
+                    print("Expected Result: Price = 21")
+                    print(price)
+                else:
+                    print("Expected result: Price = 20")
+                    print(price)            
+
         else:
-            print(f"You've ordered a Small sized pizza!")
-            print(f"Total bill: $15!")
-    else:
-        print("There seems to be a problem, please check your entries!")   
-
-#    return
+            print("There seems to be a problem. Please check your entries!")
+                
+                
 
 
-# Execute code here 👇
-    
+# Execute code here 👇    
 orderSummary()
 processOrder()
-
-# need to make this a function
-#if size == "S" or size == "s":
-#    if add_pepperoni == "Y" or add_pepperoni == "y":
-#        if extra_cheese == "Y" or extra_cheese == "y":
-#            print(f"You've ordered a Small sized pizza with Pepperoni and Extra Cheese!")
-#            print("Total bill: $18!")
-#        else:
-#            print(f"You've ordered a Small sized pizza with Pepperoni!")
-#            print("Total bill: $17!")
-#    else:
-#        print(f"You've ordered a Small sized pizza!")
-#        print("Total bill: $15!")
-#elif size == "M" or size == "m":
-#    if add_pepperoni == "Y" or add_pepperoni == "y":
-#        if extra_cheese == "Y" or extra_cheese == "y":
-#            print(f"You've ordered a Medium sized pizza with Pepperoni and Extra Cheese!")
-#            print("Total bill: $23!")
-#        else:
-#            print(f"You've ordered a Medium sized pizza with Pepperoni!")
-#            print("Total bill: $22!")
-#    else:
-#        print(f"You've ordered a Medium sized pizza!")
-#        print(f"Total bill: $20!")
-#elif size == "L" or size == "l":
-#    if add_pepperoni == "Y" or add_pepperoni == "y":
-#        if extra_cheese == "Y" or extra_cheese == "y":
-#            print(f"You've ordered a {size} sized pizza with Pepperoni and Extra Cheese!")
-#            print("Total bill: $27!")
-#        else:
-#            print(f"You've ordered a {size} sized pizza with Pepperoni!")
-#            print("Total bill: $26!")
-#    else:
-#        print(f"You've ordered a {size} sized pizza!")
-#        print("Total bill: $25!")
-#else:
-#    print("There seems to be a problem, please check your entries!")   
