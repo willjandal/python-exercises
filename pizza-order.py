@@ -47,7 +47,6 @@ def orderSummary():
     else:
         print("[+] There seems to be a problem, please check your entry!")
     
-
 # Process the logic from the inputs
 def processOrder():
         #process the order for small pizza
