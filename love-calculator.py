@@ -3,4 +3,6 @@ name1 = input() # What is your name?
 name2 = input() # What is their name?
 # 🚨 Don't change the code above 👆
 
+# Functions 👇
+
 # Write your code below this line 👇
