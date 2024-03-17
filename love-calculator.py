@@ -43,4 +43,3 @@ lower_names = combine_names.lower()
 
 countFirstName(lower_names)
 
-#hello
